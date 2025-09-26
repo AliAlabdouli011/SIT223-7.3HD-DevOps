@@ -1,0 +1,26 @@
+{
+  "name": "discountmate-api",
+  "version": "0.1.0",
+  "description": "Minimal Express API for Jenkins 7.3HD pipeline demo",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --coverage",
+    "lint": "eslint src test --max-warnings=0",
+    "build": "echo \"Build step placeholder (no transpile)\""
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^17.9.0",
+    "eslint-plugin-promise": "^7.1.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
+}
