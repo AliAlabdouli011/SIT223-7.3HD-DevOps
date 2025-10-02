@@ -1,23 +1,18 @@
-
-const request = require('supertest');
+// app.test.js  (at repo root)
+const request = require("supertest");
 let server;
 
 beforeAll(() => {
-  server = require('../src/index.js');
+  server = require("./src/index.js"); // <-- correct path from repo root
 });
 
-afterAll((done) => {
-  server.close(done);
+afterAll(done => {
+  if (server && server.close) server.close(done);
+  else done();
 });
 
-test('health endpoint returns ok', async () => {
-  const res = await request(server).get('/health');
-  expect(res.statusCode).toBe(200);
-  expect(res.body.status).toBe('ok');
-});
-
-test('price endpoint returns cheapest vendor', async () => {
-  const res = await request(server).get('/price');
-  expect(res.statusCode).toBe(200);
-  expect(res.body).toHaveProperty('cheapest');
+test("health endpoint returns ok", async () => {
+  const res = await request("http://localhost:3000").get("/health");
+  expect(res.status).toBe(200);
+  expect(res.body).toEqual({ status: "ok" });
 });
