@@ -2,10 +2,14 @@
   "name": "discountmate-api",
   "version": "0.1.0",
   "description": "Minimal Express API for Jenkins 7.3HD pipeline demo",
+{
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest --coverage",
+    "test": "jest --coverage"
+  }
+}
+
     "lint": "eslint src test --max-warnings=0",
     "build": "echo \"Build step placeholder (no transpile)\""
   },
