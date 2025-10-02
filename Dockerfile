@@ -1,8 +1,12 @@
-
 FROM node:20-alpine
 WORKDIR /app
-COPY app/package*.json ./
-RUN npm ci --omit=dev
-COPY app/ ./
+
+# copy only package files first for better layer caching
+COPY package*.json ./
+RUN npm ci --only=production --legacy-peer-deps || npm install --production --legacy-peer-deps
+
+# now copy the rest of the app
+COPY . .
+
 EXPOSE 3000
-CMD ["npm","start"]
+CMD ["node", "src/index.js"]
