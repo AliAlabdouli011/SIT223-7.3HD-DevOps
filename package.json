@@ -4,11 +4,11 @@
   "description": "SIT223-7.3HD pipeline demo",
   "main": "src/index.js",
   "type": "commonjs",
-  "scripts": {
-    "start": "node src/index.js",
-    "build": "echo \"Build step placeholder (no transpile)\"",
-    "test": "jest --coverage",
-    "lint": "eslint ."
+ "scripts": {
+  "start": "node src/index.js",
+  "build": "echo \"Build step placeholder (no transpile)\"",
+  "test": "jest --coverage",
+  "lint": "eslint . --ext .js"
   },
   "dependencies": {
     "express": "^4.19.2"
