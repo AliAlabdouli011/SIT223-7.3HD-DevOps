@@ -8,7 +8,7 @@
     "start": "node src/index.js",
     "build": "echo \"Build step placeholder (no transpile)\"",
     "test": "jest --coverage",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint ."
   },
   "dependencies": {
     "express": "^4.19.2"
