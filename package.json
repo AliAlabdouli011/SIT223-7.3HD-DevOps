@@ -1,14 +1,14 @@
 {
   "name": "discountmate-api",
   "version": "0.1.0",
-  "description": "SIT223-7.3HD pipeline demo",
+  "description": "SIT223–7.3HD pipeline demo",
   "main": "src/index.js",
   "type": "commonjs",
- "scripts": {
-  "start": "node src/index.js",
-  "build": "echo \"Build step placeholder (no transpile)\"",
-  "test": "jest --coverage",
-  "lint": "eslint . --ext .js"
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "echo \"Build step placeholder (no transpile)\"",
+    "test": "jest --coverage",
+    "lint": "eslint . --ext .js"
   },
   "dependencies": {
     "express": "^4.19.2"
@@ -21,6 +21,6 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testMatch": ["**/?(*.)+(test).[jt]s"]
+    "testMatch": ["**/*?(.*).+(test).[jt]s"]
   }
 }
